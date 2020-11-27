@@ -46,4 +46,10 @@ constructor(
     this.router.navigate(['/home/list-character']);
   }
 
+  editCharacter(id){
+    console.log(id)
+    this.router.navigate(['/home/edit-character', id]  );
+
+  }
+
 }

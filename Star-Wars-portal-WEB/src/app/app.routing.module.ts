@@ -31,6 +31,11 @@ const routes: Routes = [
       path: 'list-character',
       component: listCharacterComponent,
     },
+
+    {
+      path: 'edit-character/:id',
+      component: formCharComponent,
+  },
   
 
  
