@@ -1,12 +1,19 @@
-# Projeto Star Wars Portal
+# Star-Wars-Portal-WEB
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.0".
+### Installation
+1. Clone the repo
+   ```sh
+   git clone https://github.com/rodrigo749/Star-Wars-Portal.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the script on Database
 
 
-## INSTRUÇÕES:
-
-
-5. Dê npm install na pasta depois clonar o repositório
-
-6. Rode com ng serve
+4. Run Application
+```sh
+ng serve
+   ```
 
