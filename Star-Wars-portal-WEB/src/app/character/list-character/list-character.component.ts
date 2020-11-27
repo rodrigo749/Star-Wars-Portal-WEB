@@ -24,6 +24,10 @@ constructor(
   ){}
 
   ngOnInit() {
+
+    
+    this.findAll();//Initialisation
+    setInterval(() => this.findAll(), 15000);
     
     this.charForm = this.formBuilder.group({
       pesquisa:[''],
@@ -31,9 +35,15 @@ constructor(
     })
   }
 
-  pesquisaTodos(){
-    this.listCharacterService.getAll().subscribe(result => {this.listCharacter = result; console.log(result)})
+  findAll(){
+    this.listCharacterService.getAll().subscribe(result => {this.listCharacter = result;})
   }
 
+  deleteCharacter(id) {
+    this.listCharacterService. deleteCharacter(id).subscribe(result => { this.listCharacter = result; })
+    console.log(id)
+    alert('Mensagem excluida com sucesso')
+    this.router.navigate(['/home/list-character']);
+  }
 
 }

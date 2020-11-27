@@ -2,10 +2,7 @@
 
 <form class="mb-3" [formGroup]="charForm">
 <div class="form-row">
-        <div class="form-group col-auto mt-2">
-            <button type="submit" class="btn btn-primary mt-4" (click)="pesquisaTodos()">find for all</button>
-          </div>
-
+     
   </div>
 </form>
 
@@ -13,7 +10,7 @@
     <table class="table table-bordered text-center">
         <thead class="thead-dark">
           <tr>
-           
+           <th>id</th>
             <th>Name of Character</th>
             <th>Age</th>
              <th>Options</th>  
@@ -26,11 +23,14 @@
 
         <tbody class="table-light">
             <tr *ngFor="let listCharacter of listCharacter" >
-             
+                <td>{{ listCharacter.id }}</td>
               <td>{{ listCharacter.name_char }}</td>
               <td>{{ listCharacter.age }}</td>
               
-              <td> <button class="btn btn-info ml-2">Edit</button> </td>
+              <td>
+                <button class="btn btn-warning ml-2" (click)="editCharacter(character.id)" >Edit</button>
+                <button class="btn btn-danger ml-2" (click)="deleteCharacter(listCharacter.id)">Remove</button>
+            </td>
             </tr>
         </tbody>    
 </table>

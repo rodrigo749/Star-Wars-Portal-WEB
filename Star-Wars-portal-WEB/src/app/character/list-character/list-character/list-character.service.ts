@@ -20,4 +20,9 @@ export class ListCharacterService {
         return this.http.get<List_Character[]>(`${API}/character`);
       }
 
+      deleteCharacter(id) {
+        return this.http.delete<List_Character[]>(`${API}/character/${id}`);
+      }
+    
+
   }
