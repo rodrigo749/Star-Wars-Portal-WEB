@@ -23,7 +23,7 @@ export class formCharComponent implements OnInit{
   ngOnInit(): void {
     this.charForm = this.formBuilder.group({
       id:[null],
-      name_character:['',Validators.required],
+      name_char:['',Validators.required],
       age:['',Validators.required]
     
     });
@@ -31,9 +31,10 @@ export class formCharComponent implements OnInit{
   
  submit(){
    if(this.charForm.valid){
-    const novoSetor = this.charForm.getRawValue() as Character;
-    this.characterService.saveSetor(novoSetor).subscribe(
+    const newChar = this.charForm.getRawValue() as Character;
+    this.characterService.saveChar(newChar).subscribe(
       success =>{
+        alert('Registered successfully')
         this.location.back();
       },
       error =>{

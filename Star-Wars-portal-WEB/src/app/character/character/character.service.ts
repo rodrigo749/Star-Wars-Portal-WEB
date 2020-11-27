@@ -17,11 +17,11 @@ const API = environment.apiUrl;
 export class CharacterService {
     constructor(private http:HttpClient){}
   
-    getSetores(){
-        return this.http.get<Character[]>(`${API}/setores`).pipe(take(1));
+    getChar(){
+        return this.http.get<Character[]>(`${API}/character`).pipe(take(1));
     }
 
-    saveSetor(setor : Character){
-      return this.http.post(`${API}/setores`,setor).pipe(take(1));
+    saveChar(char : Character){
+      return this.http.post(`${API}/character`,char).pipe(take(1));
   }
   }

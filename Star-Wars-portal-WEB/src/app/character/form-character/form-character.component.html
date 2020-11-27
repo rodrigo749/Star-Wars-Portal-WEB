@@ -1,1 +1,31 @@
-<h1>Teste form chract</h1>
+
+<h2 class="h3 text-center mb-3 mt-3">Register of Character</h2>
+
+<div class="container-fluid col-md-8 mx-auto">
+    <form #form="ngForm" [formGroup]="charForm" (submit)="submit()">
+        <div class="form-group col-md-7">
+            <label for="name_char">Name of Character:</label>
+            <input formControlName="name_char" type="text" class="form-control">
+            <!-- <app-msg-erro
+                *ngIf="equipamentoForm.get('equipamento_nome').errors?.required && (form.submitted || equipamentoForm.get('equipamento_nome').touched)"
+                mensagem="Informe o nome do equipamento.">
+            </app-msg-erro> -->
+        </div>
+
+        <div class="form-group col-md-7">
+            <label for="age">Age:</label>
+            <input formControlName="age" type="number" class="form-control">
+            <!-- <app-msg-erro
+                *ngIf="equipamentoForm.get('equipamento_nome').errors?.required && (form.submitted || equipamentoForm.get('equipamento_nome').touched)"
+                mensagem="Informe o nome do equipamento.">
+            </app-msg-erro> -->
+        </div>
+       
+
+        <div class="form-group ml-3">
+            <button class="btn btn-success" type="submit">Gravar</button>
+            <button class="btn btn-primary ml-2" [routerLink]="'/home'">Voltar</button>
+        </div>
+</form>
+
+</div>
