@@ -1,1 +1,37 @@
-<h1>teste lista de char</h1>
+<h2 class="h3 text-center mb-3 mt-3">List of Characters</h2>
+
+<form class="mb-3" [formGroup]="charForm">
+<div class="form-row">
+        <div class="form-group col-auto mt-2">
+            <button type="submit" class="btn btn-primary mt-4" (click)="pesquisaTodos()">find for all</button>
+          </div>
+
+  </div>
+</form>
+
+<div class="table-responsive">
+    <table class="table table-bordered text-center">
+        <thead class="thead-dark">
+          <tr>
+           
+            <th>Name of Character</th>
+            <th>Age</th>
+             <th>Options</th>  
+            
+          </tr>
+         
+        </thead>
+
+
+
+        <tbody class="table-light">
+            <tr *ngFor="let listCharacter of listCharacter" >
+             
+              <td>{{ listCharacter.name_char }}</td>
+              <td>{{ listCharacter.age }}</td>
+              
+              <td> <button class="btn btn-info ml-2">Edit</button> </td>
+            </tr>
+        </tbody>    
+</table>
+</div>

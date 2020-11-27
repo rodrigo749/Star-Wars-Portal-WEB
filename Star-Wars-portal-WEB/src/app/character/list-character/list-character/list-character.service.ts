@@ -17,7 +17,7 @@ export class ListCharacterService {
   constructor(private http:HttpClient){}
 
       getAll(): Observable<List_Character[]>{
-        return this.http.get<List_Character[]>(`${API}/relatorios/todos`);
+        return this.http.get<List_Character[]>(`${API}/character`);
       }
 
   }

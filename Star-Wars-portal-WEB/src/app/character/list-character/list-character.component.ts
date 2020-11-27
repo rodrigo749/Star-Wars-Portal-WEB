@@ -11,8 +11,7 @@ import { ListCharacterService } from './list-character/list-character.service';
 })
 export class listCharacterComponent implements OnInit {
    listCharacter: List_Character[] = [];
-   relatorioForm:FormGroup;
-//    listaEquipamento: Lista_Equipamentos;
+   charForm:FormGroup;
   
 
 constructor(
@@ -26,13 +25,11 @@ constructor(
 
   ngOnInit() {
     
-    this.relatorioForm = this.formBuilder.group({
+    this.charForm = this.formBuilder.group({
       pesquisa:[''],
-      pesquisarTodos:['']
 
     })
   }
-
 
   pesquisaTodos(){
     this.listCharacterService.getAll().subscribe(result => {this.listCharacter = result; console.log(result)})
