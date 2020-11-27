@@ -10,8 +10,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  @Output() replyToggle = new EventEmitter(); //event of hidden/show menu
-  isShow: boolean = false;
 
 
   constructor(
@@ -22,10 +20,7 @@ export class HeaderComponent implements OnInit {
 
   }
 
-  toggle() {
-    this.isShow = !this.isShow;
-    this.replyToggle.emit(this.isShow);
-  }
+
 
   ngOnInit() {
    
