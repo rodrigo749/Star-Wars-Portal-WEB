@@ -14,14 +14,14 @@ import { formCharComponent } from '../character/form-character/form-character.co
         HomeComponent,
         HeaderComponent,
         FooterComponent,
-        formCharComponent
+       
     ],
     imports: [
         CommonModule,
         ContentModule,
         RouterModule,
+        CharacterModule
        
-        
 
     ],
     exports: [

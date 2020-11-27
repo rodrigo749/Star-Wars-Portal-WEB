@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
   isShow: boolean = false;
 
 
-
   constructor(
     private route: ActivatedRoute,
     private router: Router,
