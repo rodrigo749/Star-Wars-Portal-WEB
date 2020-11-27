@@ -8,6 +8,7 @@ import { ContentModule } from './content/content.module';
 import { FooterComponent } from './footer/footer.component';
 import { CharacterModule } from '../character/character/character.module';
 import { formCharComponent } from '../character/form-character/form-character.component';
+import { ListCharacterModule } from '../character/list-character/list-character/list-character.module';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,9 @@ import { formCharComponent } from '../character/form-character/form-character.co
         CommonModule,
         ContentModule,
         RouterModule,
-        CharacterModule
+        CharacterModule,
+        ListCharacterModule
+        
        
 
     ],
