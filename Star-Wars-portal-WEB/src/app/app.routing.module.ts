@@ -1,6 +1,7 @@
   
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { formCharComponent } from './character/form-character/form-character.component';
 import { ContentComponent } from './home/content/content.component';
 import { HomeComponent } from './home/home.component';
 
@@ -35,6 +36,13 @@ const routes: Routes = [
             component: ContentComponent,
         },
 
+        {
+            path: 'app-character',
+            component: formCharComponent,
+        },
+
+
+       
         
         ]
     },
